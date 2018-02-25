@@ -41,26 +41,14 @@ public class List
         head = newHead;
     }
 
-    /**
-     * Add a new node to the start of the list which will contain
-     * the data provided (a student ID and mark).
-     * 
-     * @param id The id of the student to be placed in this list node
-     * @param mark The student's mark 
-     */
     public void addToList(int input)
     {
-        // TODO: add code here to add a new node to the list
-        // See the Lecture slides for an example
     	ListNode newNode;
     	newNode = new ListNode(input);
     	newNode.setNext(head);
     	head = newNode;
     }
 
-    // ########
-    // TODO: ADD OTHER METHODS HERE, E.G. TO PRINT THE CONTENTS OF THE
-    // LIST AND TO FIND STUDENTS IN THE LIST
     public void printList()
     {
     	ListNode nextNode = null;
@@ -103,27 +91,5 @@ public class List
     		return false;
     	}
     }
-    /*
-    public int Find(String id)
-    {
-    	ListNode nextNode = null;
-    	ListNode foundNode = null;;
-    	nextNode = head;
-    	while((nextNode!=null)&&(foundNode==null)) 
-    	{
-    		if (nextNode.getID().equals(id)) 
-    		{
-    			foundNode = nextNode;
-    			return foundNode.getMark();
-    		}
-    		else 
-    		{
-    			nextNode = nextNode.getNext();
-    		}
-    	}
-    	
-    	return -1;
-    	
-    }*/
-    // ########
+   
 }
